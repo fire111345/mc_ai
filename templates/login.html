@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录 - MindCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <h1>欢迎回来</h1>
+      <p class="subtitle">登录 MindCare，开始你的心理陪伴之旅</p>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">用户名</label>
+          <input type="text" id="username" name="username" placeholder="请输入用户名" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">密码</label>
+          <input type="password" id="password" name="password" placeholder="请输入密码" required />
+        </div>
+
+        <button type="submit" class="login-submit">登录</button>
+      </form>
+
+      <p id="loginMessage" class="message"></p>
+
+      <div class="extra-links">
+        <a href="/">返回首页</a>
+        <span>|</span>
+        <a href="/register">还没有账号？立即注册</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

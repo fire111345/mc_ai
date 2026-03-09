@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>心情记录 - MindCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">MindCare</div>
+    <nav class="nav-links">
+      <a href="{{ url_for('index') }}">首页</a>
+      <a href="{{ url_for('chat_page') }}">AI 聊天</a>
+      <a href="{{ url_for('mood_page') }}">心情记录</a>
+      <a href="{{ url_for('profile_page') }}">个人中心</a>
+
+      <div id="authArea">
+        <a href="{{ url_for('login_page') }}" class="login-btn">登录</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mood-page">
+    <section class="mood-header">
+      <h1>今日心情记录</h1>
+      <p>记录你今天的情绪状态，帮助你更好地了解自己。</p>
+    </section>
+
+    <section class="mood-card">
+      <h2>选择今天的心情</h2>
+
+      <div class="mood-options" id="moodOptions">
+        <button class="mood-option" type="button" data-mood="开心">😀 开心</button>
+        <button class="mood-option" type="button" data-mood="平静">😌 平静</button>
+        <button class="mood-option" type="button" data-mood="焦虑">😟 焦虑</button>
+        <button class="mood-option" type="button" data-mood="难过">😢 难过</button>
+        <button class="mood-option" type="button" data-mood="烦躁">😣 烦躁</button>
+      </div>
+
+      <div class="mood-form-group">
+        <label for="moodNote">今天想记录点什么？</label>
+        <textarea
+          id="moodNote"
+          rows="5"
+          placeholder="例如：今天作业很多，有点累，但下午和朋友聊天后感觉好一些。"
+        ></textarea>
+      </div>
+
+      <div class="mood-actions">
+        <button id="saveMoodBtn" class="primary-btn" type="button">保存记录</button>
+      </div>
+
+      <p id="moodMessage" class="mood-message"></p>
+    </section>
+
+    <section class="history-card">
+      <div class="history-top">
+        <h2>历史记录</h2>
+        <button id="clearAllBtn" class="danger-btn" type="button">清空全部</button>
+      </div>
+
+      <div id="moodHistory" class="mood-history">
+        <p class="empty-tip">还没有记录，先写下今天的心情吧。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/mood.js') }}"></script>
+</body>
+</html>

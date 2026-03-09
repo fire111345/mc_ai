@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f9ff 0%, #eaf4ff 100%);
+  min-height: 100vh;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 30px;
+  box-shadow: 0 12px 35px rgba(31, 61, 120, 0.12);
+}
+
+.login-card h1 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 30px;
+  color: #1f3d78;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7a90;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #2f3e55;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d7e2f0;
+  border-radius: 12px;
+  font-size: 15px;
+  background: #f9fbff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #6aa9ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(106, 169, 255, 0.15);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+.login-submit {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5b8def 0%, #7aa7ff 100%);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.login-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(91, 141, 239, 0.28);
+}
+
+.login-submit:active {
+  transform: translateY(0);
+}
+
+.message {
+  min-height: 22px;
+  margin: 16px 0 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.extra-links {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.extra-links a {
+  color: #4d7fe6;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .login-card h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+
+  .login-submit {
+    font-size: 15px;
+    padding: 13px 14px;
+  }
+}

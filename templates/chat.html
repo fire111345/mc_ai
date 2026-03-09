@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 聊天 - MindCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}" />
+</head>
+<body>
+  <div class="chat-page">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <h2>MindCare</h2>
+        <p id="welcomeText">你好，欢迎回来</p>
+      </div>
+
+      <div class="session-toolbar">
+        <span>我的对话</span>
+        <button id="newChatBtn" type="button">+ 新建</button>
+      </div>
+
+      <div id="sessionList" class="session-list"></div>
+
+      <div class="sidebar-bottom">
+        <a href="{{ url_for('index') }}">返回首页</a>
+        <a href="{{ url_for('mood_page') }}">心情记录</a>
+        <a href="{{ url_for('profile_page') }}">个人中心</a>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <header class="chat-header">
+        <h1 id="chatTitle">AI 心理陪伴对话</h1>
+        <p>你可以和我聊聊最近的心情、学习压力、人际关系或睡眠状态。</p>
+      </header>
+
+      <section id="chatMessages" class="chat-messages">
+        <div class="message ai-message">
+          你好，我是你的心理陪伴助手。今天过得怎么样？
+        </div>
+      </section>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="请输入你想说的话..."
+          autocomplete="off"
+        />
+        <button id="sendBtn" type="button">发送</button>
+      </div>
+    </main>
+  </div>
+
+  <div id="contextMenu" class="context-menu">
+    <button id="renameSessionBtn" type="button">重命名</button>
+    <button id="deleteSessionBtn" type="button" class="danger">删除</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

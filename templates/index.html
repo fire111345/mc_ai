@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青少年心理健康 AI 助手</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">MindCare</div>
+    <nav class="nav-links">
+      <a href="/">首页</a>
+      <a href="/chat_page">AI 聊天</a>
+      <a href="/mood_page">心情记录</a>
+      <a href="/profile_page">个人中心</a>
+
+      <div id="authArea">
+        <a href="/login" class="login-btn">登录</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>青少年心理健康 AI 助手</h1>
+      <p>
+        一个面向青少年的心理陪伴与支持平台，提供 AI 对话、情绪记录、
+        心理资源和成长反馈。
+      </p>
+      <div class="hero-buttons">
+        <button id="startBtn">立即开始</button>
+        <button id="chatBtn" class="secondary-btn">进入聊天</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>核心功能</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>AI 陪伴对话</h3>
+        <p>通过温和、友好的 AI 对话，帮助青少年表达情绪与压力。</p>
+      </div>
+      <div class="card">
+        <h3>每日心情记录</h3>
+        <p>记录每天的心情状态，帮助用户观察自己的情绪变化。</p>
+      </div>
+      <div class="card">
+        <h3>心理资源支持</h3>
+        <p>提供学习压力、睡眠、人际关系等方面的心理支持内容。</p>
+      </div>
+      <div class="card">
+        <h3>成长数据反馈</h3>
+        <p>通过打卡和记录，生成个人成长趋势和情绪变化反馈。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 MindCare 青少年心理健康 AI 助手</p>
+    <p>本平台仅用于心理支持与情绪陪伴，不替代专业医疗诊断。</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

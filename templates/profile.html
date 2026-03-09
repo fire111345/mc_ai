@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人中心 - MindCare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">MindCare</div>
+    <nav class="nav-links">
+      <a href="{{ url_for('index') }}">首页</a>
+      <a href="{{ url_for('chat_page') }}">AI 聊天</a>
+      <a href="{{ url_for('mood_page') }}">心情记录</a>
+      <a href="{{ url_for('profile_page') }}">个人中心</a>
+      <a href="{{ url_for('login_page') }}" class="login-btn">登录</a>
+    </nav>
+  </header>
+
+  <main class="profile-page">
+    <section class="profile-banner">
+      <div class="profile-avatar" id="profileAvatar">M</div>
+      <div class="profile-info">
+        <h1 id="profileUsername">未登录用户</h1>
+        <p id="profileWelcome">欢迎来到你的个人中心。</p>
+      </div>
+    </section>
+
+    <section class="profile-stats">
+      <div class="stat-card">
+        <h3>心情记录总数</h3>
+        <p id="totalMoodCount">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>最近一次心情</h3>
+        <p id="latestMood">暂无记录</p>
+      </div>
+      <div class="stat-card">
+        <h3>最近记录时间</h3>
+        <p id="latestMoodTime">暂无记录</p>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <div class="profile-card">
+        <h2>我的快捷入口</h2>
+        <div class="quick-links">
+          <a href="{{ url_for('chat_page') }}" class="quick-link-card">
+            <h3>AI 聊天</h3>
+            <p>继续和 AI 助手交流你的近况与感受。</p>
+          </a>
+
+          <a href="{{ url_for('mood_page') }}" class="quick-link-card">
+            <h3>心情记录</h3>
+            <p>记录今天的情绪状态，查看历史心情变化。</p>
+          </a>
+
+          <a href="{{ url_for('index') }}" class="quick-link-card">
+            <h3>返回首页</h3>
+            <p>查看平台介绍与主要功能入口。</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <h2>账户操作</h2>
+        <div class="account-actions">
+          <button id="logoutBtn" class="danger-btn" type="button">退出登录</button>
+        </div>
+        <p id="profileMessage" class="profile-message"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+</body>
+</html>
